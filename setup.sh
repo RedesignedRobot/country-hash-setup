@@ -11,5 +11,5 @@ docker exec mongodb apt install git -y
 docker exec mongodb git clone https://github.com/ozlerhakan/mongodb-json-files.git
 docker exec mongodb mongoimport --db dev --collection cb --file mongodb-json-files/datasets/countries-big.json
 docker container ls
-docker exec logs service
-docker exec logs client
+docker logs service
+docker logs client
