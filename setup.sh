@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-#!/usr/bin/env bash
 apt update
 apt upgrade -y
 docker run -d -p 5000:5000 --name client amirayub/hash-rest-service
