@@ -7,7 +7,5 @@ docker run -d -p 27017-27019:27017-27019 --name mongodb mongo
 docker exec mongodb apt update
 docker exec mongodb apt upgrade -y
 docker exec mongodb apt install git -y
-docker exec mongodb cd home/
 docker exec mongodb git clone https://github.com/ozlerhakan/mongodb-json-files.git
-docker exec mongodb cd mongodb-json-files/datasets/
-docker exec mongodb mongoimport --db dev --collection cb --file countries-big.json
+docker exec mongodb mongoimport --db dev --collection cb --file mongodb-json-files/datasets/countries-big.json
